@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Hà Ngọc Hiếu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero banner với navbar cố định và lời chào ngắn gọn -->
+  <header class="banner" id="home">
+    <nav class="navbar">
+      <h1 class="logo">Hà Ngọc Hiếu</h1>
+      <ul class="nav-links">
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#career">Nghề nghiệp</a></li>
+        <li><a href="#library">Thư viện</a></li>
+        <li><a href="#skills">Kỹ năng</a></li>
+        <li><a href="#projects">Dự án</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="intro">
+      <span class="intro-badge">Frontend Developer • UI Enthusiast</span>
+      <h2>Xin chào, tôi là <span>Hà Ngọc Hiếu</span></h2>
+      <p>Xây dựng trải nghiệm web hiện đại với CSS3 animation, tối ưu hiệu năng và chi tiết UX tinh tế.</p>
+      <div class="intro-actions">
+        <a href="#contact" class="btn">Kết nối với tôi</a>
+        <a href="#projects" class="btn btn-outline">Xem dự án</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Thông tin cá nhân kết hợp gallery ảnh (sẽ thay bằng ảnh thật) -->
+    <section id="about" class="section profile">
+      <div class="section-heading">
+        <span class="eyebrow">Thông tin cá nhân</span>
+        <h2>Kể câu chuyện nghề nghiệp</h2>
+        <p>Tôi là sinh viên CNTT yêu thích phát triển giao diện web giàu cảm xúc. Mục tiêu của tôi là kết nối thẩm mỹ thiết kế với hiệu năng kỹ thuật.</p>
+      </div>
+      <div class="profile-grid">
+        <article class="profile-card">
+          <h3>Hồ sơ nhanh</h3>
+          <ul class="info-list">
+            <li><span>Họ tên</span><strong>Hà Ngọc Hiếu</strong></li>
+            <li><span>Địa chỉ</span><strong>Bình Thạnh, TP.HCM</strong></li>
+            <li><span>Email</span><strong>hieuhn4945@ut.edu.vn</strong></li>
+            <li><span>Điện thoại</span><strong>098 653 1405</strong></li>
+          </ul>
+        </article>
+        <article class="profile-card profile-highlight">
+          <h3>Điểm nổi bật</h3>
+          <ul class="highlight-list">
+            <li><i class="bi bi-lightning-charge"></i>Tạo layout responsive bằng flex & grid, chú trọng accessibility.</li>
+            <li><i class="bi bi-palette"></i>Kết hợp motion design vào UI để tăng tương tác người dùng.</li>
+            <li><i class="bi bi-graph-up"></i>Đo lường trải nghiệm bằng dữ liệu và cải thiện luồng người dùng.</li>
+          </ul>
+          <div class="profile-metrics">
+            <div>
+              <strong>18+</strong>
+              <span>Prototype hoàn thiện</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>Dự án web</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>Hackathon</span>
+            </div>
+          </div>
+        </article>
+        <aside class="profile-media">
+          <figure class="profile-portrait" style="--photo:url('img/life-01.jpg');">
+            <!-- Thay ảnh chân dung chính bằng cách cập nhật đường dẫn --photo ở thuộc tính style -->
+            <span class="portrait-tag">Chân dung mới nhất</span>
+          </figure>
+          <div class="portrait-details">
+            <p>Giữ bố cục gọn gàng nhưng vẫn nổi bật với chân dung hiện tại và vài khoảnh khắc tiêu biểu. Thư viện đầy đủ nằm ở mục <a href="#library">Thư viện cá nhân</a>.</p>
+            <!-- Chip preview ngắn gọn dẫn người xem tới các album tiêu biểu -->
+            <div class="portrait-highlights">
+              <span class="highlight-chip" style="--thumb:url('img/life-05.jpg');">Workshop UI</span>
+              <span class="highlight-chip" style="--thumb:url('img/life-02.jpg');">Studio</span>
+              <span class="highlight-chip" style="--thumb:url('img/life-04.jpg');">Moodboard</span>
+            </div>
+            <a class="mini-album-link" href="#library">
+              <i class="bi bi-images"></i>
+              <span>Mở thư viện ảnh cá nhân</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Thư viện ảnh cá nhân với bố cục nhẹ nhàng -->
+    <section id="library" class="section library">
+      <div class="library-wrapper">
+        <div class="library-header">
+          <span class="library-tag">Personal Gallery</span>
+          <h2>Thư viện cá nhân</h2>
+          <p>Những khoảnh khắc đời thường được chọn lọc để kể câu chuyện riêng của tôi.</p>
+        </div>
+        <div class="library-grid">
+          <!-- Cập nhật thuộc tính --photo trong từng figure để thay ảnh thật -->
+          <figure class="library-item" style="--photo:url('img/life-01.jpg');">
+            <figcaption>Đà Lạt - hành trình 2024</figcaption>
+          </figure>
+          <figure class="library-item" style="--photo:url('img/life-05.jpg');">
+            <figcaption>Khoảnh khắc vui nhộn cùng bạn bè</figcaption>
+          </figure>
+          <figure class="library-item" style="--photo:url('img/life-02.jpg');">
+            <figcaption>Góc học tập yêu thích</figcaption>
+          </figure>
+          <figure class="library-item" style="--photo:url('img/life-04.jpg');">
+            <figcaption>Làm việc nhóm tại lớp</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mốc nghề nghiệp chính và mục tiêu tương lai -->
+    <section id="career" class="section career">
+      <div class="section-heading">
+        <span class="eyebrow">Mục tiêu nghề nghiệp</span>
+        <h2>Hành trình & định hướng</h2>
+        <p>Từ các dự án học thuật đến thực tập, tôi luôn theo đuổi việc tối ưu trải nghiệm số và mong muốn tham gia đội ngũ sản phẩm sáng tạo.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-card">
+          <span class="timeline-time">2024 - nay</span>
+          <h3>Frontend Intern • LumenLab</h3>
+          <p>Phát triển dashboard B2B, chuẩn hóa design token và cải thiện hiệu năng tải trang 35%.</p>
+        </article>
+        <article class="timeline-card">
+          <span class="timeline-time">2024</span>
+          <h3>UI/UX Intensive • MindX</h3>
+          <p>Hoàn thiện quy trình nghiên cứu người dùng, xây dựng prototype tương tác cao với Figma.</p>
+        </article>
+        <article class="timeline-card">
+          <span class="timeline-time">2024 - nay</span>
+          <h3>Freelance Designer</h3>
+          <p>Thiết kế landing page cho startup giáo dục, hỗ trợ chuyển đổi sang HTML chuẩn SEO.</p>
+        </article>
+        <article class="timeline-card">
+          <span class="timeline-time">2025+</span>
+          <h3>Mục tiêu</h3>
+          <p>Gia nhập đội ngũ product để dẫn dắt xây dựng design system và trải nghiệm cross-platform.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sở thích giúp thể hiện cá tính -->
+    <section id="hobby" class="section interests">
+      <div class="section-heading">
+        <span class="eyebrow">Sở thích</span>
+        <h2>Năng lượng sáng tạo mỗi ngày</h2>
+        <p>Những hoạt động giúp tôi luôn giữ sự hứng thú và cảm hứng cho từng sản phẩm.</p>
+      </div>
+      <div class="interest-grid">
+        <div class="interest-card">
+          <i class="bi bi-music-note-beamed"></i>
+          <h3>Nghe nhạc</h3>
+          <p>Lựa chọn playlist Lo-fi và synthwave để duy trì flow khi code.</p>
+        </div>
+        <div class="interest-card">
+          <i class="bi bi-camera"></i>
+          <h3>Nhiếp ảnh</h3>
+          <p>Ghi lại khoảnh khắc đời thường, luyện cảm quan ánh sáng và bố cục.</p>
+        </div>
+        <div class="interest-card">
+          <i class="bi bi-controller"></i>
+          <h3>Sáng tạo</h3>
+          <p>Thử nghiệm motion UI, micro-interaction và prototyping.</p>
+        </div>
+        <div class="interest-card">
+          <i class="bi bi-activity"></i>
+          <h3>Thể thao</h3>
+          <p>Chạy bộ 5km mỗi tuần để giữ năng lượng tích cực.</p>
+        </div>
+        <div class="interest-card">
+          <i class="bi bi-joystick"></i>
+          <h3>Chơi game</h3>
+          <p>Khám phá game indie để rèn phản xạ và tư duy chiến thuật.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kỹ năng chuyên môn hiển thị bằng thanh tiến độ -->
+    <section id="skills" class="section skills">
+      <div class="section-heading">
+        <span class="eyebrow">Năng lực chuyên môn</span>
+        <h2>Kỹ năng & ngôn ngữ</h2>
+        <p>Tập trung vào nền tảng front-end, kết hợp nghiên cứu trải nghiệm cùng khả năng phân tích dữ liệu.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Kỹ năng lập trình</h3>
+          <div class="skill-meter">
+            <span>HTML5 / CSS3</span>
+            <div class="meter"><span style="--level:95%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>JavaScript / TypeScript</span>
+            <div class="meter"><span style="--level:80%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>React &amp; UI Library</span>
+            <div class="meter"><span style="--level:75%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>Git / CI</span>
+            <div class="meter"><span style="--level:70%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>C / C++</span>
+            <div class="meter"><span style="--level:60%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>Python</span>
+            <div class="meter"><span style="--level:60%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>C# / Java</span>
+            <div class="meter"><span style="--level:40%;"></span></div>
+          </div>
+        </article>
+        <article class="skill-card">
+          <h3>Nghiên cứu & dữ liệu</h3>
+          <div class="skill-meter">
+            <span>User Research</span>
+            <div class="meter"><span style="--level:68%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>Usability Testing</span>
+            <div class="meter"><span style="--level:72%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>Data Visualization</span>
+            <div class="meter"><span style="--level:65%;"></span></div>
+          </div>
+        </article>
+        <article class="skill-card">
+          <h3>Ngôn ngữ</h3>
+          <div class="skill-meter">
+            <span>Tiếng Việt</span>
+            <div class="meter"><span style="--level:100%;"></span></div>
+          </div>
+          <div class="skill-meter">
+            <span>Tiếng Anh</span>
+            <div class="meter"><span style="--level:50%;"></span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kế hoạch chứng chỉ và thành tích nổi bật -->
+    <section id="certificates" class="section certificates">
+      <div class="section-heading">
+        <span class="eyebrow">Học tập liên tục</span>
+        <h2>Chứng chỉ & giải thưởng</h2>
+        <p>Dù chưa sở hữu chứng chỉ chính thức, tôi lên kế hoạch rõ ràng để đạt các chứng nhận chuyên nghiệp.</p>
+      </div>
+      <div class="certificate-grid">
+        <article class="certificate-card">
+          <span class="badge">Đang học</span>
+          <h3>freeCodeCamp Responsive Web Design</h3>
+          <p>Hoàn thiện bài tập thực hành, dự kiến hoàn thành và cập nhật chứng chỉ Q1/2026.</p>
+        </article>
+        <article class="certificate-card">
+          <span class="badge">Mục tiêu</span>
+          <h3>Google UX Design Certificate</h3>
+          <p>Tập trung xây dựng portfolio case study và chuẩn bị cho kỳ thi cuối năm.</p>
+        </article>
+        <article class="certificate-card">
+          <span class="badge">Thành quả</span>
+          <h3>Top 5 Figma Hackathon</h3>
+          <p>Đồng thiết kế dashboard quản lý lớp học với trải nghiệm mượt mà trên đa thiết bị.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Dự án chính đã thực hiện -->
+    <section id="projects" class="section projects">
+      <div class="section-heading">
+        <span class="eyebrow">Dự án nổi bật</span>
+        <h2>Sản phẩm đã thực hiện</h2>
+        <p>Tập trung vào các dự án giúp tôi luyện tập quy trình thiết kế - lập trình - tối ưu.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <span class="project-year">2025</span>
+          <h3>Portfolio Cá nhân 2.0</h3>
+          <p>Thiết kế hệ thống thẻ động, animation CSS3 và dark mode, tăng 40% thời gian onsite.</p>
+          <div class="project-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>GSAP</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <span class="project-year">2024</span>
+          <h3>Website Quản lý Chi tiêu</h3>
+          <p>Dashboard theo dõi thu chi, hiển thị biểu đồ động và nhắc nhở lịch tiết kiệm.</p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>D3.js</span>
+            <span>Firebase</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <span class="project-year">2024</span>
+          <h3>Store Mẹ &amp; Bé</h3>
+          <p>Thiết kế UI thân thiện, tích hợp giỏ hàng và gợi ý sản phẩm dựa trên hành vi người dùng.</p>
+          <div class="project-tags">
+            <span>Django</span>
+            <span>Tailwind</span>
+            <span>UX Writing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Kênh liên hệ chính, mỗi thẻ dẫn tới một nền tảng -->
+    <section id="contact" class="section contact">
+      <div class="section-heading">
+        <span class="eyebrow">Kết nối</span>
+        <h2>Sẵn sàng hợp tác</h2>
+        <p>Hãy liên hệ nếu bạn cần một Frontend Developer yêu thích UI/UX và luôn muốn thử nghiệm công nghệ mới.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:hieuhn4945@ut.edu.vn">
+          <i class="bi bi-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>hieuhn4945@ut.edu.vn</p>
+          </div>
+        </a>
+        <a class="contact-card" href="https://github.com/hisu2835" target="_blank" rel="noopener">
+          <i class="bi bi-github"></i>
+          <div>
+            <h3>GitHub</h3>
+            <p>Kho dự án và mã nguồn mở.</p>
+          </div>
+        </a>
+        <a class="contact-card" href="https://www.facebook.com/hisuL2803" target="_blank" rel="noopener">
+          <i class="bi bi-facebook"></i>
+          <div>
+            <h3>Facebook</h3>
+            <p>Kết nối cộng đồng & chia sẻ hoạt động.</p>
+          </div>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/hi%E1%BA%BFu-h%C3%A0-ng%E1%BB%8Dc-839819317" target="_blank" rel="noopener">
+          <i class="bi bi-linkedin"></i>
+          <div>
+            <h3>LinkedIn</h3>
+            <p>Cập nhật hành trình sự nghiệp.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Hà Ngọc Hiếu • Thiết kế và phát triển bằng HTML5 & CSS3 nâng cao.</p>
+  </footer>
+</body>
+</html>
