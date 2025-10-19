@@ -31,7 +31,7 @@ PORTFOLIO/
 ✅ CSS3 Animations  
 
 ## 🖼️ Preview
-![Preview](https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80)
+![Preview](img/backgroud.avif)
 
 ## ⚙️ How to Run Locally
 git clone https://github.com/<your-username>/PORTFOLIO.git  
@@ -43,4 +43,4 @@ Go to Settings → Pages → Deploy from branch → main /root/
 
 ## 🧍 Author
 **👤 Hà Ngọc Hiếu**  
-🐱 GitHub: [https://github.com/hangochieu](https://github.com/hangochieu)
+🐱 GitHub: [https://github.com/hisu2835](https://github.com/hisu2835)
