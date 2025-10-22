@@ -1,46 +1,27 @@
-# 🌐 Personal Portfolio - Hà Ngọc Hiếu
+﻿# Ha Ngoc Hieu Portfolio
 
-> 🚀 A modern personal portfolio website built with **HTML & CSS only**, featuring elegant design, smooth animations, and a parallax Web 3.0 aesthetic.
+Modern Web 3.0 inspired single-page portfolio crafted with pure **HTML5** and **CSS3**, featuring animated glassmorphism, neon gradients, and accessibility-first structure.
 
-## 🪄 Overview
-This is my personal Portfolio Website, created as part of a group project assignment.
+## Experience Highlights
+- Immersive hero with metric counters, animated badges, and orbiting halo
+- Sectioned story flow: About, Journey, Skills, Projects, Library, Contact
+- Responsive CSS Grid/Flexbox layout with design tokens and utility classes
+- Advanced hover/scroll animations: floating cards, aurora background, reveal transitions
+- Accessible navigation: skip link, semantic landmarks, focus-visible states
+- Inline booking form with mailto handoff, keeping visitors on-site
 
-💡 Developer: *Hà Ngọc Hiếu*  
-🎓 Field: Web Development / Front-End  
-🌈 Tech Used: HTML5, CSS3 (Flexbox, Grid, Animation, Transform)
-
-## 🧱 Project Structure
+## Project Structure
+```
 PORTFOLIO/
-│
-├── index.html
-├── style.css
-├── README.md
-└── assets/
-    ├── images/
-    └── icons/
+|-- index.html
+|-- style.css
+`-- img/
+    |-- backgroud.avif
+    |-- life-01.jpg
+    |-- life-02.jpg
+    |-- life-04.jpg
+    `-- life-05.jpg
+```
 
-## 🧩 Features
-✅ Banner & Navbar  
-✅ Personal Info  
-✅ Career Goals  
-✅ Skills & Languages  
-✅ Projects Slider  
-✅ Parallax Background  
-✅ Responsive Layout  
-✅ Clean Code  
-✅ CSS3 Animations  
-
-## 🖼️ Preview
-![Preview](img/backgroud.avif)
-
-## ⚙️ How to Run Locally
-git clone https://github.com/<your-username>/PORTFOLIO.git  
-cd PORTFOLIO  
-start index.html
-
-## 🌐 Deploy on GitHub Pages
-Go to Settings → Pages → Deploy from branch → main /root/
-
-## 🧍 Author
-**👤 Hà Ngọc Hiếu**  
-🐱 GitHub: [https://github.com/hisu2835](https://github.com/hisu2835)
+## Usage
+Open `index.html` directly in your browser, or deploy the folder to any static hosting provider (GitHub Pages, Netlify, Vercel, etc.).
