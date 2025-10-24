@@ -136,12 +136,14 @@ dl { margin: 0; }
 dt { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-muted); }
 dd { margin: 0; font-weight: 500; color: var(--text-strong); }
 
+/* Khối bao bọc nội dung chính */
 main {
   position: relative;
   z-index: 1;
   counter-reset: section;
 }
 
+/* Lớp glow phủ mềm lên từng section */
 main::before {
   content: "";
   position: absolute;
@@ -152,6 +154,7 @@ main::before {
   pointer-events: none;
   z-index: -1;
 }
+/* Vệt sáng lớn chạy ngang đầu trang */
 main::after {
   content: "";
   position: fixed;
@@ -310,6 +313,7 @@ main::after {
   padding: 0.2rem 0.4rem;
   transition: color var(--transition);
 }
+/* Điểm đánh dấu phát sáng khi hover menu */
 .nav__links a::before {
   content: "";
   position: absolute;
@@ -455,13 +459,31 @@ main::after {
   inset: 8% 9% 22% 7%;
   animation-duration: 20s;
 }
-.hero__frame--inner {
-  inset: 16% 16% 26% 14%;
-  border-color: rgba(255, 123, 214, 0.24);
-  opacity: 0.6;
-  animation-duration: 14s;
-  animation-direction: reverse;
+
+
+/* Các hạt sáng chuyển động trong hero */
+.hero__particles {
+  position: absolute;
+  inset: -10% -12%;
+  pointer-events: none;
+  z-index: -1;
 }
+.hero__particle {
+  position: absolute;
+  width: clamp(6px, 1vw, 10px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(126, 253, 249, 0.75), rgba(126, 253, 249, 0));
+  box-shadow: 0 0 18px rgba(126, 253, 249, 0.6);
+  opacity: 0.65;
+  animation: particleDrift var(--duration-slow) linear infinite;
+}
+.hero__particle--one { top: 12%; left: 14%; animation-duration: 16s; }
+.hero__particle--two { top: 22%; right: 12%; animation-duration: 18s; animation-delay: -3s; }
+.hero__particle--three { top: 48%; left: 8%; animation-duration: 14s; animation-delay: -6s; }
+.hero__particle--four { bottom: 18%; right: 20%; animation-duration: 20s; animation-delay: -9s; }
+.hero__particle--five { bottom: 10%; left: 22%; animation-duration: 17s; animation-delay: -12s; }
+.hero__particle--six { top: 34%; right: 32%; animation-duration: 19s; animation-delay: -15s; }
 
 .hero__grid {
   position: absolute;
@@ -1507,8 +1529,28 @@ main::after {
   70% { transform: translate3d(-48%, 5%, 0) scale(1); opacity: 0.28; }
   100% { transform: translate3d(-50%, -10%, 0) scale(0.95); opacity: 0.25; }
 }
+
+  40% { transform: translate3d(1.5%, -1.5%, 0) scale(1.015); opacity: 0.85; }
+  70% { transform: translate3d(-1%, 1.2%, 0) scale(0.99); opacity: 0.6; }
+}
+
+
+/* Chuyển động nhịp cho khung neon */
 @keyframes framePulse {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.65; }
+  40% { transform: translate3d(1.5%, -1.5%, 0) scale(1.015); opacity: 0.85; }
+  70% { transform: translate3d(-1%, 1.2%, 0) scale(0.99); opacity: 0.6; }
+}
+
+/* Chuyển động cho hạt sáng trong hero */
+@keyframes particleDrift {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.65; }
+  40% { transform: translate3d(12px, -18px, 0) scale(1.2); opacity: 1; }
+  70% { transform: translate3d(-10px, 16px, 0) scale(0.8); opacity: 0.5; }
+  100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.65; }
+}
+
+
   40% { transform: translate3d(1.5%, -1.5%, 0) scale(1.015); opacity: 0.85; }
   70% { transform: translate3d(-1%, 1.2%, 0) scale(0.99); opacity: 0.6; }
 }
@@ -1686,6 +1728,24 @@ main::after {
   40% { transform: rotate(18deg) translate3d(10%, -6%, 0); opacity: 0.75; }
   70% { transform: rotate(8deg) translate3d(-8%, 4%, 0); opacity: 0.45; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
