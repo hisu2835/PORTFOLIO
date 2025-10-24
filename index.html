@@ -14,9 +14,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Liên kết bỏ qua nhanh tới nội dung chính -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
+  <!-- Khối hero giới thiệu đầu trang -->
   <header class="hero" id="home">
+    <!-- Điều hướng chính với logo và menu -->
     <nav class="nav" aria-label="Primary navigation">
       <a class="nav__brand" href="#home">Ha Ngoc Hieu</a>
       <ul class="nav__links" id="primary-navigation">
@@ -31,13 +34,20 @@
       <a class="nav__cta" href="#contact">Connect</a>
     </nav>
 
+    <!-- Các lớp ánh sáng nền trong hero -->
     <div class="hero__background" aria-hidden="true">
       <span class="hero__gradient hero__gradient--one"></span>
       <span class="hero__gradient hero__gradient--two"></span>
       <span class="hero__gradient hero__gradient--three"></span>
       <span class="hero__mesh"></span>
+      <span class="hero__frame hero__frame--outer"></span>
+      <span class="hero__frame hero__frame--inner"></span>
+      <span class="hero__grid"></span>
+      <span class="hero__flare hero__flare--one"></span>
+      <span class="hero__flare hero__flare--two"></span>
     </div>
 
+    <!-- Nội dung hero gồm giới thiệu và ảnh -->
     <div class="hero__inner">
       <div class="hero__intro">
         <span class="hero__eyebrow">Frontend Engineer | UI Motion Lover</span>
@@ -48,10 +58,12 @@
           <li>UX Motion Storyteller</li>
           <li>Hybrid Web 3.0 Advocate</li>
         </ul>
+                <!-- Cặp nút hành động chính -->
         <div class="hero__actions">
           <a class="btn" href="#projects">Explore case studies</a>
           <a class="btn btn--ghost" href="#schedule">Book a coffee chat</a>
         </div>
+                <!-- Các chỉ số nổi bật -->
         <dl class="hero__metrics">
           <div>
             <dt>9</dt>
@@ -68,10 +80,15 @@
         </dl>
       </div>
 
+            <!-- Ảnh chân dung với hiệu ứng nổi -->
       <figure class="hero__visual">
+        <span class='hero__visual-shard' aria-hidden='true'></span>
         <img src="img/life-01.jpg" alt="Ha Ngoc Hieu leading a design workshop" loading="lazy">
-        <figcaption>Facilitating a motion design masterclass, 2025.</figcaption>
+        <center>
+          <figcaption>It's me</figcaption>
+        </center>
       </figure>
+            <!-- Vành sáng và tia lửa trang trí -->
       <div class="hero__halo" aria-hidden="true">
         <span class="hero__ring hero__ring--outer"></span>
         <span class="hero__ring hero__ring--inner"></span>
@@ -79,9 +96,17 @@
         <span class="hero__spark hero__spark--two"></span>
       </div>
     </div>
+
+        <!-- Gợi ý kéo xuống -->
+    <div class="scroll-cue" aria-hidden="true">
+      <span class="scroll-cue__line"></span>
+      <span class="scroll-cue__text">Scroll</span>
+    </div>
   </header>
 
+    <!-- Nội dung chính của trang -->
   <main id="main">
+        <!-- Mục giới thiệu bản thân -->
     <section id="about" class="section about reveal">
       <header class="section__header">
         <span class="section__eyebrow">About</span>
@@ -89,6 +114,7 @@
         <p>I am a third-year Computer Science student based in Ho Chi Minh City. My focus is frontend engineering and UI/UX, with a mission to build emotionally resonant interfaces powered by sustainable design systems and pure CSS transitions.</p>
       </header>
 
+            <!-- Lưới thông tin giới thiệu -->
       <div class="about__grid">
         <article class="glass-panel about__card">
           <h3>Snapshot</h3>
@@ -145,8 +171,10 @@
         <p>From self-initiated class projects to playful web experiments, I keep exploring how frontend engineering, UX research, and design ops blend into a delightful digital journey.</p>
       </header>
 
-      <div class="timeline">
+            <!-- Danh sách cột mốc theo năm -->
+      <div class="timeline" aria-label="Milestones timeline">
         <article class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
           <span class="timeline__year">2025</span>
           <div class="timeline__body glass-panel">
             <h3>Personal site 1.0</h3>
@@ -160,6 +188,7 @@
         </article>
 
         <article class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
           <span class="timeline__year">2025</span>
           <div class="timeline__body glass-panel">
             <h3>C# browser mini-game hub</h3>
@@ -173,6 +202,7 @@
         </article>
 
         <article class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
           <span class="timeline__year">2024</span>
           <div class="timeline__body glass-panel">
             <h3>Django shop for baby care</h3>
@@ -186,6 +216,7 @@
         </article>
 
         <article class="timeline__item">
+          <span class="timeline__node" aria-hidden="true"></span>
           <span class="timeline__year">2023</span>
           <div class="timeline__body glass-panel">
             <h3>C++ snake game</h3>
@@ -200,6 +231,7 @@
       </div>
     </section>
 
+        <!-- Mục kỹ năng chuyên môn -->
     <section id="skills" class="section skills reveal">
       <header class="section__header">
         <span class="section__eyebrow">Skills</span>
@@ -265,6 +297,7 @@
       </div>
     </section>
 
+        <!-- Mục các dự án tiêu biểu -->
     <section id="projects" class="section projects reveal">
       <header class="section__header">
         <span class="section__eyebrow">Projects</span>
@@ -320,6 +353,7 @@
       </div>
     </section>
 
+        <!-- Thư viện hình ảnh và cảm hứng -->
     <section id="library" class="section library reveal">
       <header class="section__header">
         <span class="section__eyebrow">Library</span>
@@ -347,6 +381,7 @@
       </div>
     </section>
 
+        <!-- Form đặt lịch trao đổi -->
     <section id="schedule" class="section schedule reveal">
       <header class="section__header">
         <span class="section__eyebrow">Book a session</span>
@@ -413,6 +448,7 @@
       </div>
     </section>
 
+        <!-- Thông tin liên hệ cuối trang -->
     <section id="contact" class="section contact reveal">
       <header class="section__header">
         <span class="section__eyebrow">Contact</span>
@@ -457,8 +493,10 @@
     </section>
   </main>
 
+    <!-- Chân trang -->
   <footer class="site-footer">
     <p>&copy; 2025 Ha Ngoc Hieu | Crafted with pure HTML5 + CSS3.</p>
   </footer>
 </body>
 </html>
+
